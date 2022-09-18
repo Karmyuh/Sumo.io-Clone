@@ -9,7 +9,7 @@ public class Main : MonoBehaviour
 {
     [SerializeField] GameObject _pauseButton,_pausePanel,_gameWonPanel;
     [SerializeField] TextMeshProUGUI _timeText;
-    float _time = 50;
+    [SerializeField] float _time = 50;
 
     private void Update()
     {
@@ -53,9 +53,11 @@ public class Main : MonoBehaviour
     }
     public void RestartButtonOnClick()
     {
+        
         SceneManager.LoadScene(0);
-        _time = 50;
         Time.timeScale = 1;
+        _time = 50;
+        
     }
 
 
